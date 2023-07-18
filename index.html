@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Scientific Calculator</title>
+</head>
+
+<body>
+  <div class="center">Scientific Calculator</div>
+  <form name="sci-calc">
+    <table class="calculator">
+      <tr>
+        <td colspan="5"><input id="display" name="display" value="" placeholder="enter expression"></td>
+      </tr>
+      <tr>
+        <td><input type="button" class="btn_top" name="btn_top" value="C" onclick="clearscreen(this.form)"></td>
+        <td><input type="button" class="btn_top" name="btn_top" value="CE" onclick="deleteChar(this.form.display)"></td>
+        <td><input type="button" class="btn_op" name="btnOpps" value="&#960;"
+            onclick="evalpi(this.form)"></td>
+        <td><input type="button" class="btn_func" name="btn_func" value="%" onclick=" evalpercentage(this.form)"></td>
+        <td><input type="button" class="btn_func" name="btn_func" value="+" onclick="charAdd(this.form.display, '+')">
+        </td>
+      </tr>
+      <tr>
+        <td><input type="button" class="btn_num" name="btn_num" value="7" onclick="charAdd(this.form.display, '7')">
+        </td>
+        <td><input type="button" class="btn_num" name="btn_num" value="8" onclick="charAdd(this.form.display, '8')">
+        </td>
+        <td><input type="button" class="btn_num" name="btn_num" value="9" onclick="charAdd(this.form.display, '9')">
+        </td>
+        <td><input type="button" class="btn_op" name="btnOpps" value="&#x1D452;"
+            onclick="evale(this.form)"></td>
+        <td><input type="button" class="btn_func" name="btn_func" value="/" onclick="charAdd(this.form.display, '/')">
+        </td>
+      <tr>
+        <td><input type="button" class="btn_num" name="btn_num" value="4" onclick="charAdd(this.form.display, '4')">
+        </td>
+        <td><input type="button" class="btn_num" name="btn_num" value="5" onclick="charAdd(this.form.display, '5')">
+        </td>
+        <td><input type="button" class="btn_num" name="btn_num" value="6" onclick="charAdd(this.form.display, '6')">
+        </td>
+        <td><input type="button" class="btn_op" name="btn_op" value="ln" onclick=" evalln(this.form)"></td>
+        <td><input type="button" class="btn_func" name="btn_func" value="*" onclick="charAdd(this.form.display, '*')">
+        </td>
+      </tr>
+      <tr>
+        <td><input type="button" class="btn_num" name="btn_num" value="1" onclick="charAdd(this.form.display, '1')">
+        </td>
+        <td><input type="button" class="btn_num" name="btn_num" value="2" onclick="charAdd(this.form.display, '2')">
+        </td>
+        <td><input type="button" class="btn_num" name="btn_num" value="3" onclick="charAdd(this.form.display, '3')">
+        </td>
+        <td><input type="button" class="btn_op" name="btn_op" value="&radic;" onclick="evalsqrt(this.form)"></td>
+        <td><input type="button" class="btn_func" name="btn_func" value="-" onclick="charAdd(this.form.display, '-')">
+        </td>
+      </tr>
+      <tr>
+        <td><input type="button" class="btn_func" name="btn_func" value="(" onclick="charAdd(this.form.display, '(')">
+        </td>
+        <td><input type="button" class="btn_num" name="btn_num" value="0" onclick="charAdd(this.form.display, '0')">
+        </td>
+        <td><input type="button" class="btn_func" name="btn_func" value="&#46;"
+            onclick="charAdd(this.form.display, '&#46;')"></td>
+        <td><input type="button" class="btn_func" name="btn_func" value=")" onclick="charAdd(this.form.display,')')">
+        </td>
+        <td><input type="button" class="btn_op" name="btn_op" value="," onclick="charAdd(this.form.display, ',')"></td>
+      </tr>
+      <tr>
+        <td><input type="button" class="btn_func" name="btn_func" value="cos" onclick="evalcos(this.form)"></td>
+        <td><input type="button" class="btn_func" name="btn_func" value="sin" onclick="evalsin(this.form)"></td>
+        <td><input type="button" class="btn_func" name="btn_func" value="tan" onclick="evaltan(this.form)"></td>
+        <td><input type="button" class="btn_func" name="btn_op" value="pow" onclick=" evalpow(this.form)"></td>
+        <td><input type="button" class="btn_top" name="btn_top" value="=" onclick="result(this.form)"></td>
+      </tr>
+      <tr>
+        <td colspan="5"><input id="display1" disabled></td>
+      </tr>
+      </table>
+      <div class="row">
+      <h3 class="variable">Variables:</h3>
+        <input class="center1" type="text" id="variableName" placeholder="Variable Name">
+        <input class="center1" type="text" id="variableValue" placeholder="Variable Value">
+        <button class="center2" type="button" onclick="setVariable()">Add Variable</button></h3>
+  </div>
+ 
+</form>
+<div id="buttonContainer">
+</div>
+      <script src="script.js" async defer></script>
+</body>
+
+</html>
